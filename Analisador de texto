@@ -1,0 +1,44 @@
+programa
+{
+inclua biblioteca Texto --> m
+
+funcao inicio()
+{
+// Programa para contar letras maiúsculas, minúsculas e números em um texto.
+// Declaração de variáveis
+cadeia texton
+caracter digito
+inteiro letrasm = 0, letrasMa = 0, numeros = 0
+
+    // Solicita ao usuário que insira um texto
+    escreva("Digite um texto: ")
+     leia(texton)
+
+        // Usamos um laço para percorrer todos os caracteres da cadeia. Começando 
+        // no caracter 0 e indo até o último caracter, tx.numero_caracteres(numero) - 1
+        para (inteiro indice = 0; indice <= m.numero_caracteres(texton) - 1; indice++)
+        {
+            // Obtemos o caracter na posição indicada pelo índice
+            digito = m.obter_caracter(texton, indice)
+
+                    se (digito >= 'a' e digito <= 'z')
+                        {
+                            letrasm++
+                        }
+
+                        se (digito >= 'A' e digito <= 'Z')
+                        {
+                            letrasMa++
+                        }
+
+                        se (digito >= '0' e digito <= '9')
+                        {
+                            numeros++
+                        }
+    }
+    // Exibe a quantidade de letras e números
+    escreva("Quantidade de letras maiúsculas: ", letrasMa, "\n")
+    escreva("Quantidade de letras minúsculas: ", letrasm, "\n")
+    escreva("Quantidade de números: ", numeros, "\n")
+}
+}
